@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class TransactionDetail extends Model
 {
-    use HasFactory;
+   public function item(): BelongsTo
+    {
+        return $this->belongsTo(Item::class);
+    }
 }
